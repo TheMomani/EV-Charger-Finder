@@ -1,0 +1,167 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+h2 {
+
+    font-size: 20px !important;
+}
+hr {
+    border: solid !important;
+    width: 90%;
+    border-color: rgb(255, 255, 255) !important;
+    border-width: 2px !important;
+}
+.naviDiv {
+    background:linear-gradient(to bottom,rgba(0, 80, 80, 0.147),rgb(0, 143, 143)) !important;
+ 
+}
+.naviBtn {
+    border: none;
+    background-color: transparent;
+}
+.naviBtn:focus{
+    opacity: 50%;
+}
+.naviBtn:hover {
+    color: aqua !important;
+}
+.historyCol {
+    position:absolute
+}
+.historyCol.visible{
+    position: relative;
+}
+.historyBar {
+    background: linear-gradient(to bottom,black,rgb(0, 117, 117));
+    transform: translate(0,-90px);
+    padding-top: 60px;
+    transition: opacity 1s ease, transform 1s ease;
+    z-index: -12;
+    opacity: 0;
+    position: relative;
+    padding-bottom: 450px;
+}
+.historyBar:hover{
+    transform: translate(0,-47px);
+    box-shadow: 0 0 20px 10px rgba(0, 169, 169, 0.641);
+}
+.historyBar.visible {
+    transform: translate(0,-50px);
+    position:relative;
+    opacity: 1;
+}
+.historyCard {
+    background-color: transparent;
+    color: white;
+}
+@media (min-width:768px) {
+    .historyCol {
+        right:0
+    }
+    
+}
+#cityInput {
+    width: 200px !important;
+    vertical-align: center;
+    padding: 5px;
+    border: solid;
+}
+#cityInput:focus {
+    box-shadow: 0 4px 4px 4px rgba(0, 80, 80, 0.779);
+}
+.searchBtn {
+    border: solid;
+    width: 100px !important;
+    margin: 0 auto;
+}
+
+.searchBtn:hover {
+    transition: 0.3s;
+    background-color: black !important;
+    color: aqua !important;
+}
+.mapDiv {
+    height: 300px;
+    width: 300px;
+}
+.countryDiv {
+    width: 200px !important;
+}
+#evModelSelect {
+    padding-bottom: 30px !important;
+    width: 200px !important;
+}
+.mapBtn {
+    transition: 1s;
+    border-style: solid !important;
+    border: black;
+    border-width: 1px;
+    font-size: 10px !important;
+    padding: 2px;
+    color: white;
+    background: linear-gradient(45deg,black,rgba(0, 169, 169, 0.641));
+}
+.mapBtn:hover {
+    color: black;
+    background: linear-gradient(45deg,rgba(0, 255, 255, 0.641),rgb(255, 255, 255));
+}
+
+
+/* Footer */
+footer {
+    color: white;
+    background: linear-gradient(to bottom, black,rgb(0, 41, 41));
+    padding-bottom: 400px;
+}
+footer p {
+    margin-bottom: 0px !important;
+}
+footer hr{
+    display:none
+}
+footer .footerBrand {
+    font-size: 35px;
+    margin-left: 5rem;
+}
+footer .footerSubTitle {
+    font-size: 25px;
+    text-align: center;
+}
+footer .footerPortfolio {
+  animation: blink 2s infinite;
+  text-decoration: underline;
+  color: rgb(255, 255, 255);
+}
+footer .footerPortfolio:hover {
+    cursor: pointer;
+    transform: translate(0,-3px);
+    font-size: 26px;
+    text-shadow: 0 0 20px rgb(255, 255, 255);
+    transition: 0.3s;
+}
+footer .footerSecondCol {
+    border-left: solid;
+    border-width: 1px;
+}
+footer .footerIcon {
+    font-size: 40px;
+}
+footer .footerIcon:hover {
+    animation: blink 2s infinite;
+    text-shadow: 0 0 20px rgb(255, 255, 255);
+}
+@keyframes blink {
+  60%, 100% { opacity: 1; }
+  50%      { color: rgb(0, 154, 154); }
+}
+
+@media (max-width:768px){
+    footer hr {
+        display: block
+    }
+    footer .footerSecondCol {
+        border-left: none;
+    }
+}
