@@ -1,5 +1,7 @@
 EV Charger Finder
 
+github pages: https://themomani.github.io/EV-Charger-Finder/
+
 A web application to find nearby compatible chargers for electric vehicles. This project applies front-end development knowledge, integrating APIs and interactive maps to solve a practical problem.
 
 
