@@ -39,6 +39,7 @@ L.marker([0,0]).addTo(map)
   .bindPopup('')
   .openPopup();
 
+//dictionary 
 const connectorAliases = {
   // CCS (Combined Charging System)
   "CCS": [
@@ -154,7 +155,7 @@ const connectorAliases = {
   ]
 };
 
-
+//after fetching chargers nearby, filters to show only compatible ones
 function compatibleCharger(dictionary, userInput, stations) {
   if (!userInput) return [];
 
@@ -207,6 +208,7 @@ async function fetchEV() {
 
 }
 
+//uses longitude and latitude of city to find nearby chargers
 async function fetchCharger(latitude,longitude) {
 
     try {
@@ -234,6 +236,7 @@ async function fetchCharger(latitude,longitude) {
     // }
 }
 
+// Function to find latitude and longitude of inputted city
 async function fetchCityCoords(cityName, countryCode){
     try {
 
@@ -267,6 +270,7 @@ async function fetchCityCoords(cityName, countryCode){
     
 }
 
+// The submit button
 submitForm.addEventListener("submit", async event => {
     event.preventDefault();
 
@@ -293,11 +297,11 @@ submitForm.addEventListener("submit", async event => {
       // Center map on the new city
       map.setView(coordinates, 10);
 
-      // ✅ STEP 2: Clear previous markers
+      // Clear previous markers
       markers.forEach(marker => map.removeLayer(marker));
       markers.length = 0;
 
-      // ✅ STEP 3: Add new markers
+      // new markers
       matchedStations.forEach(station => {
           const { latitude, longitude, name, address } = station;
 
