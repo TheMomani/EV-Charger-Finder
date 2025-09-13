@@ -11,21 +11,6 @@ const evDropdown = document.getElementById('evModelSelect');
 let connector = ""
 const markers = [];  // Store all current markers
 errorTXT.innerText = "";
-const historyCol = document.querySelector(".historyCol")
-const historyBtn = document.getElementById("historyBtn")
-const historyBar = document.querySelector(".historyBar")
-
-
-historyBtn.addEventListener("click", event=>{
-  event.preventDefault()
-
-  historyBar.classList.toggle("visible")
-
-  setTimeout(() => { 
-    historyCol.classList.toggle("visible")
-  }, 1000);
-
-})
 
 //map
 const map = L.map('map').setView([43.2569, -79.9010],13);
