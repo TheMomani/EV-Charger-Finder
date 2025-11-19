@@ -1,4 +1,4 @@
-EV Charger Finder
+EV Charger Finder BingBongDoopBloop
 
 github pages: https://themomani.github.io/EV-Charger-Finder/
 
